@@ -57,7 +57,7 @@ export default function Home() {
         <GrapesJsStudio
           onReady={onReady}
           options={{
-            licenseKey: "YOUR_LICENSE_KEY",
+            licenseKey: process.env.NEXT_PUBLIC_GRAPEJS_KEY || '',
             project: {
               default: {
                 pages: [
