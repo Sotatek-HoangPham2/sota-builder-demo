@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import type { Editor } from "grapesjs";
 import GrapesJsStudio, {
   StudioCommands,
   ToastVariant,
 } from "@grapesjs/studio-sdk/react";
 import chartjsPlugin from "grapesjs-chartjs-plugin";
 import { tableComponent } from "@grapesjs/studio-sdk-plugins";
+
+type Editor = any;
 
 import "@grapesjs/studio-sdk/style";
 
