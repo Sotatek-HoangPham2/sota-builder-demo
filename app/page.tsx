@@ -6,7 +6,6 @@ import GrapesJsStudio, {
   ToastVariant,
 } from "@grapesjs/studio-sdk/react";
 import chartjsPlugin from "grapesjs-chartjs-plugin";
-import { tableComponent } from "@grapesjs/studio-sdk-plugins";
 
 type Editor = any;
 
