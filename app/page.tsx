@@ -75,9 +75,38 @@ export default function Home() {
                 chartjsPlugin(editor, {
                   /* options */
                 }),
-              tableComponent.init({
-                block: { category: "Extra", label: "My Table" },
-              }),
+              (editor) => {
+                editor.BlockManager.add('custom-table', {
+                  label: 'Table',
+                  category: 'Basic',
+                  content: `
+                    <table class="custom-table" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                      <thead>
+                        <tr>
+                          <th style="padding: 12px; border: 1px solid #ddd; background-color: #f5f5f5;">Header 1</th>
+                          <th style="padding: 12px; border: 1px solid #ddd; background-color: #f5f5f5;">Header 2</th>
+                          <th style="padding: 12px; border: 1px solid #ddd; background-color: #f5f5f5;">Header 3</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Row 1, Cell 1</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Row 1, Cell 2</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Row 1, Cell 3</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Row 2, Cell 1</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Row 2, Cell 2</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Row 2, Cell 3</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  `,
+                  attributes: {
+                    class: 'fa fa-table'
+                  }
+                });
+              }
             ],
           }}
         />
